@@ -12,7 +12,11 @@ public class Wallet {
     
    private PrivateKey sKey=null;
    private PublicKey address=null;
-   
+   private double total_input=0;
+   private double total_output=0;
+   private double balance = total_input + total_output;
+   private double inputTransacions=0;
+   private double outputTransactions=0;
    
 //-------------------------------Fin variables---------------------------------------//   
    
@@ -45,6 +49,32 @@ public class Wallet {
    }
    
    
+   public double getTotalInput(){
+       return this.total_input;
+   }
+   
+   
+   public void setTotalInput(double transaccion){
+       this.total_input+=transaccion;
+   }
+   
+   
+   public double getTotalOutput(){
+       return this.total_output;
+   }
+   
+   
+   public void setTotalOutput(double transaccion){
+       this.total_output+=transaccion;
+   }
+   
+   
+   public double getBalance () {
+       return this.balance;
+   }
+   
+   
+   
 //---------------------------Fin Getters and Setters-----------------------------------//
 
 //---------------------------Inicio Metidos-------------------------------------------------//
@@ -52,6 +82,20 @@ public class Wallet {
 public void generateKeyPair(){
     setAddress(GenSig.generateKeyPair().getPublic());
 }
+
+@Override
+    public String toString() {
+        return "\n" + "Wallet = " + getAddress().hashCode() + "\n" +
+                      "Total input = " + getTotalInput() + "\n" +
+                      "Total output = " + getTotalOutput() + "\n" +
+                      "Balance = " + getBalance() + "\n";
+    }
+
+
+
+
+
+
 
 
 }

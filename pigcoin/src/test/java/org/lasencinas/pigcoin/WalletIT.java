@@ -16,6 +16,21 @@ public class WalletIT {
     
     public WalletIT() {
     }
+    
+    @Test
+    public void constructor_test(){
+        Wallet cartera = new Wallet();
+        assertNotNull(cartera);
+    }
+    
+      @Test
+    public void generate_key_pair_test() {
+        Wallet wallet = new Wallet();
+        assertNotNull(wallet);
+        wallet.generateKeyPair();
+        assertNotNull(wallet.getAddress());
+        assertNotNull(wallet.getSK());
+    }
 
 //    @Test
 //    public void testGetSK() {

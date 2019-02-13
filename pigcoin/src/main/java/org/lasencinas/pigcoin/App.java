@@ -53,16 +53,16 @@ public class App {
         System.out.println("\n" + "Ver transaccion" + "\n" +
                                   "==============="        );
 
-//        Transaction trx = new Transaction();
-//        trx = new Transaction("hash_1", "0", wallet_1.getAddress(), wallet_2.getAddress(), 20, "a flying pig!");
-//        
-//        System.out.println(trx.toString());
-//
-//        /**
-//         * Crea el blockchain
-//         * y añade transacciones que crean moneda "pigcoins"
-//         */
-//
+        Transaction trx = new Transaction();
+        trx = new Transaction("hash_1", "0", wallet_1.getAddress(), wallet_2.getAddress(), 20, "a flying pig!");
+        
+        System.out.println(trx.toString());
+
+        /**
+         * Crea el blockchain
+         * y añade transacciones que crean moneda "pigcoins"
+         */
+
 //        System.out.println("\n" + "Ver BlockChain" + "\n" + 
 //                                  "=============="        );
 //        

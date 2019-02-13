@@ -28,17 +28,59 @@ public class Transaction {
         this.message=mensaje;
     }
     
-
+    //Fin constructor
+    
+    
+    //getters y setters
+    
+    
+   
+    
+    public String getHash (){
+        return this.hash;
+    }
+    
+    
+    public String getPrev_hash () {
+        return this.prev_hash;
+    }
+    
+    
+    public PublicKey getPkeySender ()  {
+        return this.pKey_sender;
+    }
+    
+    
+    public PublicKey getPkey_recipient () {
+        return this.pKey_recipient;
+    }
+    
+    
+    public double getPigcoins (){
+        return this.pigcoins;
+    }
+    
+    
+    public String getMessage () {
+        return this.message;
+    }
+            
+    //fin getters y setters
+    
+    //Inicio metodos
+    
+    
+   
 
 
 @Override
     public String toString() {
-        return "\n" + "Hash = " + this.hash + "\n" +
-                      "Prev_hash = " + this.prev_hash + "\n" +
-                      "pKey_sender = " + this.pKey_sender.hashCode() + "\n" +
-                      "pKey_recipient = " + this.pKey_recipient.hashCode() + "\n" +
-                      "pigcoins = " + this.pigcoins + "\n" +
-                      "message = " + this.message + "\n";
+        return "\n" + "Hash = " + getHash() + "\n" +
+                      "Prev_hash = " + getPrev_hash() + "\n" +
+                      "pKey_sender = " + getPkeySender().hashCode() + "\n" +
+                      "pKey_recipient = " + getPkey_recipient().hashCode() + "\n" +
+                      "pigcoins = " + getPigcoins() + "\n" +
+                      "message = " + getMessage() + "\n";
     }
 
 

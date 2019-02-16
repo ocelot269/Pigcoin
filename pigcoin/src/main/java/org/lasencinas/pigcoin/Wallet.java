@@ -96,12 +96,12 @@ public void generateKeyPair(){
 
 
 public void loadCoins(BlockChain block){
-    for (Transaction i : block.getBlockchain()){
-        if (i.getPkey_recipient() == getAddress()){
-            setTotalInput(i.getPigcoins());
+    for (Transaction transaccion : block.getBlockchain()){
+        if (transaccion.getPkey_recipient() == getAddress()){
+            setTotalInput(transaccion.getPigcoins());
        }
         else {
-           setTotalOutput(i.getPigcoins()) ; 
+           setTotalOutput(transaccion.getPigcoins()) ; 
         }
     }
 }

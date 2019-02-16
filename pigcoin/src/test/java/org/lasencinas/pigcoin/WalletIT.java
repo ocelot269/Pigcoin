@@ -32,11 +32,16 @@ public class WalletIT {
         assertNotNull(wallet.getSK());
     }
 
-//    @Test
-//    public void testGetSK() {
-//        Wallet cartera = new Wallet ();
-//        cartera.setSK();
-//        assertEquals(20, cartera.getsK());
-//    }
-//    
+   @Test
+   public void testloadCoins() {
+       Wallet cartera = new Wallet ();
+       BlockChain block = new BlockChain();
+       Transaction pasta = new Transaction();
+       block.addOrigin(pasta);
+       cartera.loadCoins(block);
+       assertNotNull(block);
+       
+       
+    }
+    
 }

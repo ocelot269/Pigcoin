@@ -14,7 +14,7 @@ public class Wallet {
    private PublicKey address=null;
    private double total_input=0;
    private double total_output=0;
-   private double balance = total_input + total_output;
+   private double balance = total_input - total_output;
    private double inputTransacions=0;
    private double outputTransactions=0;
    
@@ -79,9 +79,7 @@ public class Wallet {
 
 //---------------------------Inicio Metidos-------------------------------------------------//
 
-public void generateKeyPair(){
-    setAddress(GenSig.generateKeyPair().getPublic());
-}
+
 
 @Override
     public String toString() {
@@ -92,7 +90,21 @@ public void generateKeyPair(){
     }
 
 
+public void generateKeyPair(){
+    setAddress(GenSig.generateKeyPair().getPublic());
+}
 
+
+public void loadCoins(BlockChain block){
+    for (Transaction i : block.getBlockchain()){
+        if (i.getPkey_recipient() == getAddress()){
+            setTotalInput(i.getPigcoins());
+       }
+        else {
+           setTotalOutput(i.getPigcoins()) ; 
+        }
+    }
+}
 
 
 

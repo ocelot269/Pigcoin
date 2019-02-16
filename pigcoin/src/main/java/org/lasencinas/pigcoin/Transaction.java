@@ -18,6 +18,8 @@ public class Transaction {
     
     }
     
+    
+    //sobrecarga de constructor
     public Transaction(String hash, String prev_hash, PublicKey key,
             PublicKey clave,double pigcoins,String mensaje ){
         this.hash=hash;

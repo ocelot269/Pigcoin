@@ -63,34 +63,34 @@ public class App {
          * y añade transacciones que crean moneda "pigcoins"
          */
 
-//        System.out.println("\n" + "Ver BlockChain" + "\n" + 
-//                                  "=============="        );
-//        
-//        // Crea primero la direccion "origen" del sistema que genera los pigcoins
-//        Wallet origin = new Wallet();
-//        origin.generateKeyPair();
-//
-//        BlockChain bChain = new BlockChain();
-//        trx = new Transaction("hash_1", "0", origin.getAddress(), wallet_1.getAddress(), 20, "bacon eggs");
-//        bChain.addOrigin(trx);
-//        trx = new Transaction("hash_2", "1", origin.getAddress(), wallet_2.getAddress(), 10, "spam spam spam");
-//        bChain.addOrigin(trx);
-//        trx = new Transaction("hash_3", "hash_1", wallet_1.getAddress(), wallet_2.getAddress(), 20, "a flying pig!");
-//        bChain.addOrigin(trx);
-//        
-//        // Visualiza el blockchain                
-//        bChain.summarize();
-//        
-//        /**
-//         * Ve la transaccion de una posicion determinada del blockchain
-//         */
-//        
-//        Integer position = 1;
-//        System.out.println("\n" + "Ver Transaccion en posicion " + position.toString() + " del BlockChain" + "\n" + 
-//                                  "============================================"        );
-//
-//        bChain.summarize(position);        
-//
+        System.out.println("\n" + "Ver BlockChain" + "\n" + 
+                                 "=============="        );
+        
+        // Crea primero la direccion "origen" del sistema que genera los pigcoins
+        Wallet origin = new Wallet();
+        origin.generateKeyPair();
+
+        BlockChain bChain = new BlockChain();
+        trx = new Transaction("hash_1", "0", origin.getAddress(), wallet_1.getAddress(), 20, "bacon eggs");
+        bChain.addOrigin(trx);
+        trx = new Transaction("hash_2", "1", origin.getAddress(), wallet_2.getAddress(), 10, "spam spam spam");
+        bChain.addOrigin(trx);
+        trx = new Transaction("hash_3", "hash_1", wallet_1.getAddress(), wallet_2.getAddress(), 20, "a flying pig!");
+        bChain.addOrigin(trx);
+        
+        // Visualiza el blockchain                
+        bChain.summarize();
+        
+        /**
+         * Ve la transaccion de una posicion determinada del blockchain
+         */
+        
+        Integer position = 1;
+        System.out.println("\n" + "Ver Transaccion en posicion " + position.toString() + " del BlockChain" + "\n" + 
+                                  "============================================"        );
+
+        bChain.summarize(position);        
+
 //        /**
 //         * Indicar en la wallet
 //         * el total de pigcoins que se han enviado,
@@ -98,15 +98,15 @@ public class App {
 //         * y el balance
 //         */
 //
-//        System.out.println("\n" + "Ver el total de pigcoins de las dos wallet" + "\n" + 
-//                                  "=========================================="        );
-//        
-//        wallet_1.loadCoins(bChain);
-//        System.out.println(wallet_1.toString());
-//
-//        wallet_2.loadCoins(bChain);
-//        System.out.println(wallet_2.toString());        
-//
+        System.out.println("\n" + "Ver el total de pigcoins de las dos wallet" + "\n" + 
+                                  "=========================================="        );
+        
+        wallet_1.loadCoins(bChain);
+        System.out.println(wallet_1.toString());
+
+        wallet_2.loadCoins(bChain);
+        System.out.println(wallet_2.toString());        
+
 //        /**
 //         * Carga en la wallet el total de transacciones
 //         * recibidas (aquellas que significan recibir pigcoins)
